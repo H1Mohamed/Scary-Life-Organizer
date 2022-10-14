@@ -1,0 +1,5 @@
+---------------The List:--------------------
+1-Find How to edit ,save and get JSON files from a server
+2-Implement the edit system
+3-Make a system for auto-making folders and files with JSON files inside 
+4-Make the callender system kinda automated

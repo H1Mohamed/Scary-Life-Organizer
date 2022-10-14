@@ -1,0 +1,12 @@
+{
+    "name":"DarkPager By H.Mohamed",
+    "version":"1.0.0",
+    "manifest_version":3,
+    "description":"A 2in1 extention , Its Both A Callender and a automatic theme changer based on the curent month (when the extention is installed the date will be set to the computer date)",
+    "icons":{
+        "128":"icons/logo.png"
+    },
+    "action":{
+        "default_popup":"popup/popup.html"
+    }
+}
