@@ -1,126 +1,138 @@
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>DarkPager</title>
-        <link rel="stylesheet" href="popup.css">
-        <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    </head>
-    <header>
-      <nav>
-        <div class="Home NavDiv">
-          <button id="HomeBtn"class="HomeBtn NavBtn">
-            <span class="material-symbols-rounded">home</span>
-            <p>Home</p>
-          </button>
-          <div class="line NavBtnLine"></div>
-        </div>
-        <div class="Events NavDiv">
-          <button class="EventsBtn NavBtn">
-            <span class="material-symbols-rounded">event</span>
-             <p>Events</p>
-          </button>
-          <div class="line NavBtnLine"></div>
-        </div>
-        <div class="Notes NavDiv">
-          <button class="NotesBtn NavBtn">
-            <p>
-              <span class="material-symbols-rounded">task_alt</span>
-              To-Do
-            </p> 
-          </button>
-          <div class="line NavBtnLine"></div>
-        </div>
-        <div class="Timer NavDiv">
-          <button class="TimerBtn NavBtn">
-            <p>
-              <span class="material-symbols-rounded">timer</span>
-              Timer
-            </p>
-          </button>
-          <div class="line NavBtnLine"></div>
-        </div>
-        <div class="Settings NavDiv">
-          <button class="SettingsBtn NavBtn">
-            <p>
-              <span class="material-symbols-rounded">settings</span>
-              Settings
-            </p>
-          </button>
-          <div class="line NavBtnLine"></div>
-        </div>
-
-      </nav>
-    </header>
-    <body>
-      <div id="HomeDiv">
-        <div class="clock">
-            <div class="hand hour" data-hour-hand></div>
-            <div class="hand minute" data-minute-hand></div>
-            <div class="hand second" data-second-hand></div>
-            <div class="number number1">1</div>
-            <div class="number number2">2</div>
-            <div class="number number3">3</div>
-            <div class="number number4">4</div>
-            <div class="number number5">5</div>
-            <div class="number number6">6</div>
-            <div class="number number7">7</div>
-            <div class="number number8">8</div>
-            <div class="number number9">9</div>
-            <div class="number number10">10</div>
-            <div class="number number11">11</div>
-            <div class="number number12">12</div>
-        </div>
-        <div class="Time">
-            <p><span id="TimeSpan"></span></p>                  
-            <p id="TimeClockSpan">
-                <span id="hours">00</span><span>:</span><span id="minutes">00</span><span>:</span><span id="seconds">00</span> <span id="session">AM</span>
-            </p>
-        </div>
-        <div class="space"></div>
-        <div class="callenderContaier">
-            <div class="calendar">
-                <div class="month">
-                  <i class="fas fa-angle-left prev"></i>
-                  <div class="date">
-                    <h1></h1>
-                    <p></p> 
-                  </div>
-                  <i class="fas fa-angle-right next"></i>
-                </div>
-                <div class="weekdays">
-                  <div>Sun</div>
-                  <div>Mon</div>
-                  <div>Tue</div>
-                  <div>Wed</div>
-                  <div>Thu</div>
-                  <div>Fri</div>
-                  <div>Sat</div>
-                </div>
-                <div class="days"></div>
-            </div>
-        </div>
-      </div>
-      <div id="EventsDiv"style="display:none;">
-        <div class="HallowenEvent">
-          <img src="" alt="">
-          <h6 class="HallowenEventTitle">Halloween</h6>
-          <button id="HalloweenEventLearnMoreBtn"></button>
-          <button id="HalloweenEventNotifyBtn"><span class="material-symbols-rounded">
-            notifications
-            </span></button>
-        </div>
-      </div>
-      <div id="ToDos"style="display:none;">
-
-      </div>
-      <div id="Timer"style="display:none;">
-
-      </div>
-      <div id="Settings"style="display:none;">
-        
-      </div>
-
+	<head>
+    <meta charset="utf-8" />
+    <title>DarkPager</title>
+    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	</head>
+	<header>
+		<nav>
+			<div class="Home NavDiv" data-link="HomeDiv">
+				<button id="HomeBtn" class="HomeBtn NavBtn">
+					<span class="material-symbols-rounded">home</span>
+					<p>Home</p>
+				</button>
+				<div class="line NavBtnLine"></div>
+			</div>
+			<div class="Events NavDiv" data-link="EventsDiv">
+				<button class="EventsBtn NavBtn">
+					<span class="material-symbols-rounded">event</span>
+					<p>Events</p>
+				</button>
+				<div class="line NavBtnLine"></div>
+			</div>
+			<div class="Notes NavDiv" data-link="ToDosDiv">
+				<button class="NotesBtn NavBtn">
+					<p>
+						<span class="material-symbols-rounded">task_alt</span>
+						To-Do
+					</p>
+				</button>
+				<div class="line NavBtnLine"> </div>
+			</div>
+			<div class="Timer NavDiv" data-link="TimerDiv">
+				<button class="TimerBtn NavBtn">
+					<p>
+						<span class="material-symbols-rounded">timer</span>
+						Timer
+					</p>
+				</button>
+				<div class="line NavBtnLine"></div>
+			</div>
+			<div class="Settings NavDiv" data-link="SettingsDiv">
+				<button class="SettingsBtn NavBtn">
+					<p>
+						<span class="material-symbols-rounded">settings</span>
+						Settings
+					</p>
+				</button>
+				<div class="line NavBtnLine"></div>
+			</div>
+		
+		</nav>	
+	</header>
+    <body>		
+			<div class="panel" id="HomeDiv">
+				<div class="clock">
+					<div class="hand hour" data-hour-hand></div>
+					<div class="hand minute" data-minute-hand></div>
+					<div class="hand second" data-second-hand></div>
+					<div class="number number1">1</div>
+					<div class="number number2">2</div>
+					<div class="number number3">3</div>
+					<div class="number number4">4</div>
+					<div class="number number5">5</div>
+					<div class="number number6">6</div>
+					<div class="number number7">7</div>
+					<div class="number number8">8</div>
+					<div class="number number9">9</div>
+					<div class="number number10">10</div>
+					<div class="number number11">11</div>
+					<div class="number number12">12</div>
+				</div>
+				<div class="Time">
+					<p><span id="TimeSpan"></span></p>                  
+					<p id="TimeClockSpan">
+							<span id="hours">00</span><span>:</span><span id="minutes">00</span><span>:</span><span id="seconds">00</span> <span id="session">AM</span>
+					</p>
+				</div>
+				<div class="space"></div>
+				<div class="callenderContaier">
+					<div class="calendar">
+							<div class="month">
+								<i class="fas fa-angle-left prev"></i>
+								<div class="date">
+									<h1></h1>
+									<p></p> 
+								</div>
+								<i class="fas fa-angle-right next"></i>
+							</div>
+							<div class="weekdays">
+								<div>Sun</div>
+								<div>Mon</div>
+								<div>Tue</div>
+								<div>Wed</div>
+								<div>Thu</div>
+								<div>Fri</div>
+								<div>Sat</div>
+							</div>
+							<div class="days"></div>
+					</div>
+				</div>
+			</div>
+			<div class="panel active" id="EventsDiv">
+				<div class="halwoEvent Event">
+					<img src="/icons/logo.png" alt=""class="EventImg">
+					<h1 class="halowEventTitle">
+						Halloween!
+					</h1>
+					<p class="halowEventDiscrp">
+						Celebrate Halloween on the 31 Oct.
+					</p>
+					<button id="LearnmoreHalowEvent">
+						<span class="material-symbols-rounded">info</span> Learn More
+					</button>
+					<button id="notifyHalowEvent"><span class="material-symbols-rounded">
+						notifications
+						</span></button>
+				</div>
+				<div class="UnknownEvent Event">
+					<img src="/icons/logo.png" alt="">
+					<h1 class="UnknowEventTitle EventTitle">
+						Unknown Event
+					</h1>
+					<p class="UnknowEventDiscrp EventDiscription">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						<br>Adipiscing enim eu turpis egestas pretium aenean pharetra magna ac.
+					</p>
+					<button id="LearnmoreHalowEvent LearnMoreEventBtn"></button>
+					<button id="notifyHalowEvent NotifyEventBtn"></button>
+				</div>
+			</div>
+			<div class="panel" id="ToDosDiv"></div>
+			<div class="panel" id="TimerDiv"></div>
+			<div class="panel" id="SettingsDiv"></div>
     </body>
     <script src="popup.js" ></script>
 </html>

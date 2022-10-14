@@ -128,30 +128,23 @@ const secondHand = document.querySelector('[data-second-hand]')
 const TimeSpan = document.getElementById('TimeSpan')
 var date=new Date()
 
+let links = document.querySelectorAll("[data-link]"),
+    panel = document.querySelectorAll(".panel")
 
-const HomeBtn = document.getElementById('HomeBtn');
-const EventsBtn = document.getElementById('EventsBtn');
-
-
-
-var EventsDiv=document.getElementById('EventsDiv');
-
-console.warn("btn:",EventsBtn)
-console.warn("div:",EventsDiv)
 // Fuctions Running
 
 setClock()
 
 TimeSpan.innerHTML = TimeSpanFunc()
-EventsBtn.addEventListener('click', function(){
-  
-  if (HomeDiv.style.display === "none") {
-    EventsDiv.style.display = "block";
-    HomeDiv.style.display = "none";
-  } else {
-    EventsDiv.style.display = "none";
-  }
-});
+
+for(let i = 0; i < links.length; i++) {
+  links[i].addEventListener("click", () => {
+    for(let j = 0; j < panel.length; j++) {
+      panel[j].classList.remove("active")
+    }
+    document.querySelector(`#${event.currentTarget.getAttribute("data-link")}`).classList.toggle("active")
+  })
+}
 renderCalendar(); 
 
 
