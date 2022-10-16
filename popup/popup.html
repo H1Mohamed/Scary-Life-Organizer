@@ -8,21 +8,21 @@
 	</head>
 	<header>
 		<nav>
-			<div class="Home NavDiv" data-link="HomeDiv">
+			<div class="HomeBtn NavDiv" data-link="HomeDiv">
 				<button id="HomeBtn" class="HomeBtn NavBtn">
 					<span class="material-symbols-rounded">home</span>
 					<p>Home</p>
 				</button>
 				<div class="line NavBtnLine"></div>
 			</div>
-			<div class="Events NavDiv" data-link="EventsDiv">
+			<div class="EventsBtn NavDiv" data-link="EventsDiv">
 				<button class="EventsBtn NavBtn">
 					<span class="material-symbols-rounded">event</span>
 					<p>Events</p>
 				</button>
 				<div class="line NavBtnLine"></div>
 			</div>
-			<div class="Notes NavDiv" data-link="ToDosDiv">
+			<div class="NotesBtn NavDiv" data-link="ToDosDiv">
 				<button class="NotesBtn NavBtn">
 					<p>
 						<span class="material-symbols-rounded">task_alt</span>
@@ -31,7 +31,7 @@
 				</button>
 				<div class="line NavBtnLine"> </div>
 			</div>
-			<div class="Timer NavDiv" data-link="TimerDiv">
+			<div class="TimerBtn NavDiv" data-link="TimerDiv">
 				<button class="TimerBtn NavBtn">
 					<p>
 						<span class="material-symbols-rounded">timer</span>
@@ -40,7 +40,7 @@
 				</button>
 				<div class="line NavBtnLine"></div>
 			</div>
-			<div class="Settings NavDiv" data-link="SettingsDiv">
+			<div class="SettingsBtn NavDiv" data-link="SettingsDiv">
 				<button class="SettingsBtn NavBtn">
 					<p>
 						<span class="material-symbols-rounded">settings</span>
@@ -103,32 +103,21 @@
 			</div>
 			<div class="panel active" id="EventsDiv">
 				<div class="halwoEvent Event">
-					<img src="/icons/logo.png" alt=""class="EventImg">
-					<h1 class="halowEventTitle">
+					<img src="/images/Search-Icon.png" alt=""class="EventImg">
+					<h1 class="halowEventTitle EventTitle">
 						Halloween!
 					</h1>
 					<p class="halowEventDiscrp">
 						Celebrate Halloween on the 31 Oct.
 					</p>
-					<button id="LearnmoreHalowEvent">
+					<button id="LearnmoreHalowEvent"onclick="">
 						<span class="material-symbols-rounded">info</span> Learn More
 					</button>
 					<button id="notifyHalowEvent"><span class="material-symbols-rounded">
 						notifications
 						</span></button>
-				</div>
-				<div class="UnknownEvent Event">
-					<img src="/icons/logo.png" alt="">
-					<h1 class="UnknowEventTitle EventTitle">
-						Unknown Event
-					</h1>
-					<p class="UnknowEventDiscrp EventDiscription">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-						<br>Adipiscing enim eu turpis egestas pretium aenean pharetra magna ac.
-					</p>
-					<button id="LearnmoreHalowEvent LearnMoreEventBtn"></button>
-					<button id="notifyHalowEvent NotifyEventBtn"></button>
-				</div>
+			</div>
+
 			</div>
 			<div class="panel" id="ToDosDiv"></div>
 			<div class="panel" id="TimerDiv"></div>

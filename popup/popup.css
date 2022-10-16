@@ -1,24 +1,26 @@
 
 :root{
-  --light-background-color:white;
-  --link-color:#3ab0ff;
-  --light-text-color:rgb(7, 7, 7);
+  ---background-color:white;
+  ---color:#3ab0ff;
+  ---text-color:black;
   --hour-clock-hand:#ffb526;
   --min-clock-hand:#3ab0ff;
   --sec-clock-hand:#f87474;
-  --light-secondlayer-background-color:lightgrey;
-  --thirdlayer-background-color:#3ab0ff;
-  --onhoverclick-background-color:#3ab0ff;
-  --onhoverclick-border-color:#ffb526;
-  --important-background-color:#f87474;
+
+
+  --secondlayer-background-color:rgba(201, 191, 191, 0.726);
+  --thirdlayer-background-color:rgb(88, 88, 88);
+  --click-hover-colors:rgba(243, 69, 69,0.938);
+  --important-text-colors:rgba(71, 71, 212, 0.938);
+  --lines-atracting-colors:#f0bc54;
 }
 
 html{
   width:510px;
   height:600px;
-  background-color: var(--light-background-color);
+  background-color: var(--background-color);
   border-radius: 20px;
-  color: var(--light-text-color);
+  color: var(--text-color);
   zoom:80%;
   user-select: none; /* Standard syntax */
 }
@@ -47,7 +49,7 @@ nav button {
   background-color: transparent;
   /* outline:hidden; */
   border: none;
-  text-align: left;
+  text-align: center;
 }
 
 .NavBtnLine {
@@ -62,8 +64,10 @@ nav button {
   color: #f87474;
 }
 .NavBtn:hover + .NavBtnLine {
-  transition: all 200ms;
+  transition: all 250ms;
+  cursor: pointer;
   background-color: #f87474;
+  transform: translateY(-0.2rem);
 }
 
 .panel {
@@ -80,6 +84,27 @@ nav button {
 .shown{display: block;}
 body::-webkit-scrollbar{width:0.5rem;background-color: lightgray;border-radius: 30px;}
 body::-webkit-scrollbar-thumb{background-color: #3ab0ff;border-radius: 30px;}
+/*  */
+.Event{
+  background-color: var(--secondlayer-background-color);
+  border-radius: 30px;
+  width:100%;
+  height: fit-content;
+}
+.EventTitle{
+  text-align: center;
+}
+.EventImg{
+  border-radius: 15px;
+  float:right;
+  width:5rem;
+  height:5rem;
+  background-color: red;
+  margin:2rem 2rem;
+}
+
+
+
 /* The date code */
 #TimeSpan{font-size: 1.5rem;transform: translateY(5rem);
 }
@@ -93,7 +118,7 @@ body::-webkit-scrollbar-thumb{background-color: #3ab0ff;border-radius: 30px;}
 .clock {
   width: 200px;
   height: 200px;
-  background-color: var(--light-secondlayer-background-color);
+  background-color: var(--secondlayer-background-color);
   border-radius: 50%;
   border: 3px solid black;
   position: relative;

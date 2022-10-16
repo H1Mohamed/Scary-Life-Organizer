@@ -120,18 +120,48 @@ document.querySelector(".next").addEventListener("click", () => {
   renderCalendar();
 });
 
+
+function EventNotifChecker(EventId,EventNotifToggle,EventTime){
+  if(EventsList.find(EventId)===true){
+    switch(EventNotifToggle){
+      case true:
+        const birthday = new Date();
+        const date1 = birthday.getDate();
+
+        if(date1 ===EventTime){
+          
+        };
+        break;
+      case false:
+        return;
+    }
+  }else{
+    return;
+  }
+}
 // Vars
 
 const hourHand = document.querySelector('[data-hour-hand]')
 const minuteHand = document.querySelector('[data-minute-hand]')
 const secondHand = document.querySelector('[data-second-hand]')
 const TimeSpan = document.getElementById('TimeSpan')
-var date=new Date()
+var date=new Date();
 
 let links = document.querySelectorAll("[data-link]"),
     panel = document.querySelectorAll(".panel")
 
+const EventsList={
+  EventHallowen:"evidHalo52574"
+}
+let event1Notify=true,
+    event1Time="31,10"
 // Fuctions Running
+
+
+
+
+
+
 
 setClock()
 
