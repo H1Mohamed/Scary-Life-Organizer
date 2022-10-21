@@ -2,23 +2,26 @@
 	<head>
     <meta charset="utf-8" />
     <title>DarkPager</title>
-    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="../css/popup.css">
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 	</head>
 	<header>
+		<div>
+			<h1 id="TabName">
+			</h1>
+		</div>
 		<nav>
 			<div class="HomeBtn NavDiv" data-link="HomeDiv">
 				<button id="HomeBtn" class="HomeBtn NavBtn">
-					<span class="material-symbols-rounded">home</span>
-					<p>Home</p>
+					<p>
+					<span class="material-symbols-rounded">home</span>Home</p>
 				</button>
 				<div class="line NavBtnLine"></div>
 			</div>
 			<div class="EventsBtn NavDiv" data-link="EventsDiv">
 				<button class="EventsBtn NavBtn">
-					<span class="material-symbols-rounded">event</span>
-					<p>Events</p>
+					<p><span class="material-symbols-rounded">event</span>Events</p>
 				</button>
 				<div class="line NavBtnLine"></div>
 			</div>
@@ -116,12 +119,11 @@
 					<button id="notifyHalowEvent"><span class="material-symbols-rounded">
 						notifications
 						</span></button>
-			</div>
-
+				</div>
 			</div>
 			<div class="panel" id="ToDosDiv"></div>
 			<div class="panel" id="TimerDiv"></div>
 			<div class="panel" id="SettingsDiv"></div>
     </body>
-    <script src="popup.js" ></script>
+	<script src="../js/Popup.js" type="module"></script>
 </html>

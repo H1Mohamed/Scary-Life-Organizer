@@ -1,12 +1,15 @@
+
+
 {
-    "name":"DarkPager By H.Mohamed",
-    "version":"1.0.0",
+    "name":"Life Orginizer By H.Mohamed",
+    "version":"1.2.0",
     "manifest_version":3,
-    "description":"A 2in1 extention , Its Both A Callender and a automatic theme changer based on the curent month (when the extention is installed the date will be set to the computer date)",
+    "description":"An advansed extention made my care to help you orginize your life while brousing your favorite brouser(Google Chrome/Ms Edge/Chromuim),This extention gives your a callender,clock,New Events and Hollidays and so much more comming in latter updates! ",
     "icons":{
         "128":"images/logo.png"
     },
     "action":{
-        "default_popup":"popup/popup.html"
+        "default_popup":"popup/popup.html",
+        "default_title": "LifeOrginizer"
     }
 }
