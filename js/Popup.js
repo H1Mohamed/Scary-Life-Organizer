@@ -43,6 +43,25 @@ function EventNotifChecker(EventId,EventNotifToggle,EventTime){
     return;
   }
 }
+
+// Varibeles
+let links = document.querySelectorAll("[data-link]"),
+panel = document.querySelectorAll(".panel")
+
+
+const EventsData=JSON.parse(JSON.stringify(EventsDataRaw))
+var EventsBody = document.getElementById("EventsDiv")
+var EventElement = document.createElement('div')
+EventElement.classList.add("Event")
+console.log(EventsData.E1["EventDescription"])
+
+const hourHand = document.querySelector('[data-hour-hand]')
+const minuteHand = document.querySelector('[data-minute-hand]')
+const secondHand = document.querySelector('[data-second-hand]')
+const TimeSpan = document.getElementById('TimeSpan')
+var date=new Date();
+
+
 // Functions
 
 function displayTime(){
@@ -163,56 +182,30 @@ document.querySelector(".next").addEventListener("click", () => {
 });
 
 
-function EventsElements(EventDataName){
-  if(EventsData[EventDataName]){
-    if(EventsData[EventDataName] === 5){
-      EventsBody.appendChild(EventElement);
-      EventElement.innerHTML = `
-      <div class=" Event">
-        <img src="${EventsData[EventDataName]["EventImgLink"]}" class="EventImg">
-        <h1 class=" EventTitle">
-          ${EventsData[EventDataName]["EventName"]}
-        </h1>
-        <p class="halowEventDiscrp">
-          ${EventData[EventDataName]}
-        </p>
-        <a src=""id="LearnmoreHalowEvent"onclick="">
-          <span class="material-symbols-rounded">info</span> Learn More
-        </button>
+function EventsElements(){
+  if(EventsData.E1){
+    EventsBody.appendChild(EventElement);
+    EventElement.innerHTML = `
+    <div class=" Event">
+      <img src="${EventsData.E1.EventImgLink}" class="EventImg">
+      <h1 class=" EventTitle">
+        ${EventsData.E1.EventTitle}
+      </h1> 
+      <p class="EventDiscription">
+        ${EventsData.E1["EventDescription"]}
+      </p>
+      <button src="${EventsData.E1.LearnMoreBtnLink}"id="LearnmoreHalowEvent"onclick="">
+        <span class="material-symbols-rounded">info</span> Learn More
+      </button>
 
     </div>`
-    }
+  
   }
 }
-        // <button id="notifyHalowEvent">
-        //   <span class="material-symbols-rounded">
-        //     notifications
-        //   </span>
-        // </button>
-// Varibeles
 
-let links = document.querySelectorAll("[data-link]"),
-panel = document.querySelectorAll(".panel")
-
-
-const EventsData=JSON.stringify(EventsDataRaw)
-
-const EventsBody = document.getElementById("EventsDiv")
-let EventElement = document.createElement('div')
-EventElement.classList.add("Event")
-
-
-
-const hourHand = document.querySelector('[data-hour-hand]')
-const minuteHand = document.querySelector('[data-minute-hand]')
-const secondHand = document.querySelector('[data-second-hand]')
-const TimeSpan = document.getElementById('TimeSpan')
-var date=new Date();
 
 // Fuctions Running
 
-
-EventsElements()
 
 setClock()
 
@@ -227,3 +220,9 @@ for(let i = 0; i < links.length; i++) {
   })
 }
 renderCalendar(); 
+ 
+
+
+
+
+EventsElements("E1")

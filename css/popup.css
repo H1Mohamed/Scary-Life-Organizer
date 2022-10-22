@@ -1,4 +1,4 @@
-
+/* The Root And Body Section */
 :root{
   ---background-color:white;
   ---color:#3ab0ff;
@@ -31,25 +31,25 @@ body{
 *::after, *::before {
   box-sizing: border-box;
 }
-.material-symbols-rounded {
-  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
-}
+/* Important Stuff */
 .space {
   margin: 5rem 0;
 }
+/* The Navigation System Styke */
 nav {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
   margin-bottom: 3.5rem;
 }
 nav button {
-  width: calc(499px / 5);
+  width: calc(499px / 3);
 }
 .NavBtn {
   background-color: transparent;
   /* outline:hidden; */
   border: none;
   text-align: center;
+  font-size: 1rem;
 }
 
 .NavBtnLine {
@@ -69,31 +69,33 @@ nav button {
   background-color: #f87474;
   transform: translateY(-0.2rem);
 }
+.NavBtn span{font-size: 1.5rem;}
 
 .panel {
   width: 100%;
   height: 100%;
   display: none;
+  transition: all 300ms;
+  opacity:0.1;
 }
 
 .panel.active {
   display:block;
+  opacity:1;
 }
-
-.hidden{display: none;}
-.shown{display: block;}
+/* The Scrool Bar  */
 body::-webkit-scrollbar{width:0.5rem;background-color: lightgray;border-radius: 30px;}
 body::-webkit-scrollbar-thumb{background-color: #3ab0ff;border-radius: 30px;}
-/*  */
+/* The Eents Section*/
+/* The Event's Body style */
 .Event{
   background-color: var(--secondlayer-background-color);
   border-radius: 30px;
   width:100%;
   height: fit-content + 2rem;
-  text-align: right;
 }
 .Event p{
-  margin-left: 5rem;
+  margin-left: 2rem;
 }
 .EventTitle{
   text-align: center;
@@ -102,12 +104,12 @@ body::-webkit-scrollbar-thumb{background-color: #3ab0ff;border-radius: 30px;}
   border-radius: 15px;
   width:5rem;
   height:5rem;
-  background-color: red;
+  float:right;
 }
 
 
-
-/* The date code */
+/* The Home Section */
+/* The Date and Time code */
 #TimeSpan{font-size: 1.5rem;transform: translateY(5rem);
 }
 #TimeClockSpan{
@@ -191,7 +193,7 @@ body::-webkit-scrollbar-thumb{background-color: #3ab0ff;border-radius: 30px;}
     background-color: var(--hour-clock-hand);
 }
  
-/* callender */
+/* The Callender styles */
 
 .calendar {
   	width: 100%;
@@ -284,3 +286,6 @@ body::-webkit-scrollbar-thumb{background-color: #3ab0ff;border-radius: 30px;}
 .today {
   background-color: var(--important-text-colors);
 }
+
+
+
