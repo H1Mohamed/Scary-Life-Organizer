@@ -4,45 +4,8 @@ import EventsDataRaw from '../Data/Events-Data.json' assert {type: 'json'};
 // lopper functions running
 setInterval(setClock, 1000)
 setInterval(displayTime, 10);
-// trash Code
- 
-/* ,"theme":{
-     "images":{"theme_frame":"images\/theme_frame.png",
-     "theme_toolbar":"images\/theme_toolbar.png",
-     "theme_tab_background":"images\/theme_tab_background.png",
-     "theme_ntp_background":"images\/theme_ntp_background.png"},
-     "colors":{"frame":[47,27,65],
-         "toolbar":[135,35,65],
-         "tab_text":[240,89,65],
-         "tab_background_text":[240,89,65],
-         "bookmark_text":[47,27,65],
-         "ntp_background":[255,255,255],
-         "ntp_text":[0,0,0],
-         "ntp_link":[6,55,116],
-         "button_background":[47,27,65,1]},
-         "tints":{"buttons":[0.98,0.59,0.47]},
-         "properties":{"ntp_background_alignment":"bottom",
-         "ntp_background_repeat":"no-repeat"}
- }*/
 
-function EventNotifChecker(EventId,EventNotifToggle,EventTime){
-  if(EventsList.find(EventId)===true){
-    switch(EventNotifToggle){
-      case true:
-        const birthday = new Date();
-        const date1 = birthday.getDate();
 
-        if(date1 ===EventTime){
-          
-        };
-        break;
-      case false:
-        return;
-    }
-  }else{
-    return;
-  }
-}
 
 // Varibeles
 let links = document.querySelectorAll("[data-link]"),
@@ -53,7 +16,6 @@ const EventsData=JSON.parse(JSON.stringify(EventsDataRaw))
 var EventsBody = document.getElementById("EventsDiv")
 var EventElement = document.createElement('div')
 EventElement.classList.add("Event")
-console.log(EventsData.E1["EventDescription"])
 
 const hourHand = document.querySelector('[data-hour-hand]')
 const minuteHand = document.querySelector('[data-minute-hand]')
@@ -61,6 +23,10 @@ const secondHand = document.querySelector('[data-second-hand]')
 const TimeSpan = document.getElementById('TimeSpan')
 var date=new Date();
 
+
+let [milliseconds,seconds,minutes,hours] = [0,0,0,0];
+let timerRef = document.querySelector('.timerDisplay');
+let int = null;
 
 // Functions
 
@@ -130,7 +96,6 @@ const renderCalendar = () => {
   ).getDay();
 
   const nextDays = 7 - lastDayIndex - 1;
-
   const months = [
     "January",
     "February",
@@ -192,19 +157,65 @@ function EventsElements(){
         ${EventsData.E1.EventTitle}
       </h1> 
       <p class="EventDiscription">
-        ${EventsData.E1["EventDescription"]}
+        ${EventsData.E1.EventDescription}
       </p>
-      <button src="${EventsData.E1.LearnMoreBtnLink}"id="LearnmoreHalowEvent"onclick="">
+      <button class="EventLMBtn"onclick="window.open('${EventsData.E1.LearnMoreLink}')">
         <span class="material-symbols-rounded">info</span> Learn More
       </button>
 
     </div>`
-  
   }
+  if(date.getDate() == (EventsData.E1.EventTime - 2)){
+    const notification = new Notification("Happy Hallowen!", {
+      body: "Today is hallowen ,So stay happy selebrating it"
+    })
+
+  }
+}
+
+function displayTimer(){
+  milliseconds+=10;
+  if(milliseconds == 1000){
+      milliseconds = 0;
+      seconds++;
+      if(seconds == 60){
+          seconds = 0;
+          minutes++;
+          if(minutes == 60){
+              minutes = 0;
+              hours++;
+          }
+      }
+  }
+  let h = hours < 10 ? "0" + hours : hours;
+  let m = minutes < 10 ? "0" + minutes : minutes;
+  let s = seconds < 10 ? "0" + seconds : seconds;
+  let ms = milliseconds < 10 ? "00" + milliseconds : milliseconds < 100 ? "0" + milliseconds : milliseconds;
+
+  timerRef.innerHTML = ` ${h} : ${m} : ${s} : ${ms}`;
 }
 
 
 // Fuctions Running
+
+document.getElementById('startTimer').addEventListener('click', ()=>{
+    if(int!==null){
+        clearInterval(int);
+    }
+    int = setInterval(displayTimer,10);
+});
+
+document.getElementById('pauseTimer').addEventListener('click', ()=>{
+    clearInterval(int);
+});
+
+document.getElementById('resetTimer').addEventListener('click', ()=>{
+    clearInterval(int);
+    [milliseconds,seconds,minutes,hours] = [0,0,0,0];
+    timerRef.innerHTML = '00 : 00 : 00 : 000 ';
+});
+
+
 
 
 setClock()
@@ -221,8 +232,4 @@ for(let i = 0; i < links.length; i++) {
 }
 renderCalendar(); 
  
-
-
-
-
-EventsElements("E1")
+EventsElements()

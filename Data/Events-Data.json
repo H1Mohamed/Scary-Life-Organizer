@@ -1,9 +1,10 @@
 {
     "E1":{
         "EventName":"Hallowen",
-        "EventImgLink":"../images/Event1Images.png",
+        "EventImgLink":"../images/Event1Image.png",
         "EventTitle":"Hallowen!",
         "EventDescription":"Hallowen is an event thats popular in the cristain contreis...",
-        "LearnMoreBtnLink":"https://en.wikipedia.org/wiki/Halloween"
+        "LearnMoreLink":"https://linkshortner.net/nDiPx",
+        "EventTime":31
     }
 }

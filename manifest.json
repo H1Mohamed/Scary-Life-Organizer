@@ -2,14 +2,15 @@
 
 {
     "name":"Life Orginizer By H.Mohamed",
-    "version":"1.2.0",
+    "version":"1.5.0",
     "manifest_version":3,
-    "description":"An advansed extention made my care to help you orginize your life while brousing your favorite brouser(Google Chrome/Ms Edge/Chromuim),This extention gives your a callender,clock,New Events and Hollidays and so much more comming in latter updates! ",
+    "description":"An advansed extention made my care to help you orginize your life while using your browser.",
     "icons":{
         "128":"images/logo.png"
     },
     "action":{
         "default_popup":"popup/popup.html",
         "default_title": "LifeOrginizer"
-    }
+    },
+    "permissions": ["tabs"]
 }

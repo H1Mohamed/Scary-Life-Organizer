@@ -1,41 +1,56 @@
 /* The Root And Body Section */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap');
 :root{
-  ---background-color:white;
-  ---color:#3ab0ff;
-  ---text-color:black;
+  --Bg-color:#2F1B41;
+  --text-color:#f7eae8;
   --hour-clock-hand:#ffb526;
   --min-clock-hand:#3ab0ff;
   --sec-clock-hand:#f87474;
 
 
-  --secondlayer-background-color:rgba(201, 191, 191, 0.726);
-  --thirdlayer-background-color:rgb(88, 88, 88);
-  --click-hover-colors:rgba(243, 69, 69,0.938);
-  --important-text-colors:rgba(71, 71, 212, 0.938);
-  --lines-atracting-colors:#f0bc54;
+  --secondlayer-background-color:#872341;
+  --thirdlayer-background-color:#BE3144;
+  --click-hover-colors:#F05941;
+  --important-text-colors:#3ab0ff;
+  --lines-atracting-colors:#ffb526;
 }
 
 html{
   width:510px;
   height:600px;
-  background-color: var(--background-color);
+  background-color: var(--Bg-color);
   border-radius: 20px;
   color: var(--text-color);
   zoom:80%;
-  user-select: none; /* Standard syntax */
+  user-select: none; 
+  font-family: 'Inconsolata', Comic Sans Ms; 
+  font-size: 15px;
 }
 
 body{
   overflow: none;
+  background-color: var(--background-color);
 }
 *::after, *::before {
   box-sizing: border-box;
 }
 /* Important Stuff */
+button{
+  color:var(--text-color);
+  border-radius: 15px;
+  border: transparent;
+  cursor: pointer;
+  transition: all ease-in-out 350ms;
+  font-family: 'Inconsolata', monospace;
+  background-color: var(--thirdlayer-background-color);
+}
+span{
+  box-shadow: #f7eae8;
+}
 .space {
   margin: 5rem 0;
 }
-/* The Navigation System Styke */
+/* The Navigation System Style */
 nav {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
@@ -46,67 +61,40 @@ nav button {
 }
 .NavBtn {
   background-color: transparent;
-  /* outline:hidden; */
   border: none;
   text-align: center;
   font-size: 1rem;
+  transition: all 350ms ease;
+  color: var(--important-text-colors);
 }
 
 .NavBtnLine {
-  width: 80%;
-  background-color: #3ab0ff;
+  width: 60%;
+  background-color: var(--important-text-colors);
   border-radius: 15px;
   height: 5px;
   margin: 0 auto;
+  transition: all 350ms ease;
 }
 .NavBtn:hover {
-  transition: all 200ms;
-  color: #f87474;
+  color: var(--click-hover-colors);
+  cursor: pointer;
 }
 .NavBtn:hover + .NavBtnLine {
-  transition: all 250ms;
   cursor: pointer;
-  background-color: #f87474;
+  background-color: var(--click-hover-colors);
+  width:70%;
   transform: translateY(-0.2rem);
 }
+
 .NavBtn span{font-size: 1.5rem;}
 
-.panel {
-  width: 100%;
-  height: 100%;
-  display: none;
-  transition: all 300ms;
-  opacity:0.1;
-}
+.panel {display: none;}
 
-.panel.active {
-  display:block;
-  opacity:1;
-}
+.panel.active {display:block;}
 /* The Scrool Bar  */
-body::-webkit-scrollbar{width:0.5rem;background-color: lightgray;border-radius: 30px;}
-body::-webkit-scrollbar-thumb{background-color: #3ab0ff;border-radius: 30px;}
-/* The Eents Section*/
-/* The Event's Body style */
-.Event{
-  background-color: var(--secondlayer-background-color);
-  border-radius: 30px;
-  width:100%;
-  height: fit-content + 2rem;
-}
-.Event p{
-  margin-left: 2rem;
-}
-.EventTitle{
-  text-align: center;
-}
-.EventImg{
-  border-radius: 15px;
-  width:5rem;
-  height:5rem;
-  float:right;
-}
-
+body::-webkit-scrollbar{width:0.5rem;background-color: transparent;border-radius: 30px;}
+body::-webkit-scrollbar-thumb{background-color: var(--click-hover-colors);border-radius: 30px;}
 
 /* The Home Section */
 /* The Date and Time code */
@@ -154,55 +142,55 @@ body::-webkit-scrollbar-thumb{background-color: #3ab0ff;border-radius: 30px;}
 .clock .number11 { --rotation: 330deg; }
   
 .clock .hand {
-    --rotation: 0;
-    position: absolute;
-    bottom: 50%;
-    left: 50%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    transform-origin: bottom;
-    z-index: 10;
-    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+  --rotation: 0;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform-origin: bottom;
+  z-index: 10;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
 }
 .clock::after {
-    content: '';
-    position: absolute;
-    background-color: black;
-    z-index: 11;
-    width: 15px;
-    height: 15px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
+  content: '';
+  position: absolute;
+  background-color: black;
+  z-index: 11;
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
 }
 .clock .hand.second {
-    width: 3px;
-    height: 45%;
-    background-color: var(--sec-clock-hand);
+  width: 3px;
+  height: 45%;
+  background-color: var(--sec-clock-hand);
 }
 .clock .hand.minute {
-    width: 6px;
-    height: 40%;
-    background-color: var(--min-clock-hand);
+  width: 6px;
+  height: 40%;
+  background-color: var(--min-clock-hand);
 }
   
 .clock .hand.hour {
-    width: 8px;
-    height: 35%;
-    background-color: var(--hour-clock-hand);
+  width: 8px;
+  height: 35%;
+  background-color: var(--hour-clock-hand);
 }
  
 /* The Callender styles */
 
 .calendar {
-  	width: 100%;
-  	height: fit-content;
+  width: 100%;
+  height: fit-content;
  	color: default;
-  	zoom:60%;
-    left: 50%;
-    right: 50%;
-    margin:0 auto;
+  zoom:60%;
+   left: 50%;
+   right: 50%;
+   margin:0 auto;
 }
 
 .month {
@@ -262,7 +250,7 @@ body::-webkit-scrollbar-thumb{background-color: #3ab0ff;border-radius: 30px;}
 .days div {
   font-size: 1.3rem;
   margin: 0.3rem;
-  width: calc(45.5rem / 7);
+  width: calc(92.2% / 7);
   height: 5rem;
   display: flex;
   justify-content: center;
@@ -287,5 +275,58 @@ body::-webkit-scrollbar-thumb{background-color: #3ab0ff;border-radius: 30px;}
   background-color: var(--important-text-colors);
 }
 
+/* The Events Section*/
+/* The Event's Body style */
+.Event{
+  background-color: var(--secondlayer-background-color);
+  border-radius: 30px;
+  width:100%;
+  height: fit-content + 2rem;
+  padding:0.2rem;
+}
+.Event p{
+  margin-left: 2rem;
+}
+.EventTitle{
+  text-align: center;
+}
+.EventImg{
+  border-radius: 15px;
+  width:8rem;
+  height:8rem;
+  float:right;
+}
+.EventLMBtn{
+  background-color: var(--thirdlayer-background-color);
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+/* The Timer Section */
 
-
+.timerDisplay{
+  width: 92%;
+  background: var(--secondlayer-background-color);
+  padding: 20px 0;
+  color: var(--text-color);
+  font-size: 40px;
+  text-align: center;
+  border-radius: 20px;
+  margin:0 auto;
+}
+.ControlsBtns{
+    width: 90%;
+    margin: 60px auto 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+.ControlsBtns button{
+    width: 120px;
+    height: 45px;
+    font-size: 18px;
+}
+.ControlsBtns button:nth-last-child(3){
+  background-color: var(--min-clock-hand);
+}
+.ControlsBtns button:nth-last-child(1){
+  background-color: var(--hour-clock-hand);
+}
