@@ -159,17 +159,14 @@ function EventsElements(){
       <p class="EventDiscription">
         ${EventsData.E1.EventDescription}
       </p>
+      <p class="EventCountDownTimer">
+      Remaining Time:<br>     <span id="EventCountDownTimer"></span>
+      </p>
       <button class="EventLMBtn"onclick="window.open('${EventsData.E1.LearnMoreLink}')">
         <span class="material-symbols-rounded">info</span> Learn More
       </button>
 
     </div>`
-  }
-  if(date.getDate() == (EventsData.E1.EventTime - 2)){
-    const notification = new Notification("Happy Hallowen!", {
-      body: "Today is hallowen ,So stay happy selebrating it"
-    })
-
   }
 }
 
@@ -193,6 +190,32 @@ function displayTimer(){
   let ms = milliseconds < 10 ? "00" + milliseconds : milliseconds < 100 ? "0" + milliseconds : milliseconds;
 
   timerRef.innerHTML = ` ${h} : ${m} : ${s} : ${ms}`;
+}
+function CountDownTimer(dt, id){
+  var end = new Date(dt);
+  var _second = 1000;
+  var _minute = _second * 60;
+  var _hour = _minute * 60;
+  var _day = _hour * 24;
+  var timer;
+  function showRemaining() {
+    var now = new Date();
+    var distance = end - now;
+    if (distance < 0) {
+      clearInterval(timer);
+      document.getElementById(id).innerHTML += 'EXPIRED!';
+      return;
+    }
+    var days = Math.floor(distance / _day);
+    var hours = Math.floor((distance % _day) / _hour);
+    var minutes = Math.floor((distance % _hour) / _minute);
+    var seconds = Math.floor((distance % _minute) / _second);
+    document.getElementById(id).innerHTML = days + ' Days ';
+    document.getElementById(id).innerHTML += hours + ' Hours ';
+    document.getElementById(id).innerHTML += minutes + ' Mins ';
+    document.getElementById(id).innerHTML += seconds + 'S';
+  }
+  timer = setInterval(showRemaining, 1000);
 }
 
 
@@ -231,5 +254,7 @@ for(let i = 0; i < links.length; i++) {
   })
 }
 renderCalendar(); 
- 
+
+CountDownTimer(EventsData.E1.EventTime,"EventCountDownTimer")
+
 EventsElements()

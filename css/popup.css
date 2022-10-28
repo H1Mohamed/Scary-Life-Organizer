@@ -47,9 +47,7 @@ button{
 span{
   box-shadow: #f7eae8;
 }
-.space {
-  margin: 5rem 0;
-}
+.space {padding: 2.6rem 0;}
 /* The Navigation System Style */
 nav {
   display: grid;
@@ -98,12 +96,12 @@ body::-webkit-scrollbar-thumb{background-color: var(--click-hover-colors);border
 
 /* The Home Section */
 /* The Date and Time code */
-#TimeSpan{font-size: 1.5rem;transform: translateY(5rem);
+#TimeSpan{
+  font-size: 1.5rem;
+  transform: translateY(-5.5rem);
 }
 #TimeClockSpan{
-    font-size: 1.5rem;
-    margin-top: 30px;
-    margin-right: 1rem;
+  font-size: 1.5rem;
 }
 .Time{margin-top: 4rem;}
 /* The Clock Code */
@@ -280,7 +278,7 @@ body::-webkit-scrollbar-thumb{background-color: var(--click-hover-colors);border
 .Event{
   background-color: var(--secondlayer-background-color);
   border-radius: 30px;
-  width:100%;
+  width:98%;
   height: fit-content + 2rem;
   padding:0.2rem;
 }
@@ -292,15 +290,18 @@ body::-webkit-scrollbar-thumb{background-color: var(--click-hover-colors);border
 }
 .EventImg{
   border-radius: 15px;
-  width:8rem;
-  height:8rem;
+  width:10rem;
+  height:10rem;
   float:right;
+  margin-top:3rem;
 }
 .EventLMBtn{
   background-color: var(--thirdlayer-background-color);
   margin-left: 2rem;
   margin-bottom: 1rem;
+  font-size: 1.2rem;
 }
+.EventDiscription{font-size: 1.2rem;}
 /* The Timer Section */
 
 .timerDisplay{
@@ -327,6 +328,6 @@ body::-webkit-scrollbar-thumb{background-color: var(--click-hover-colors);border
 .ControlsBtns button:nth-last-child(3){
   background-color: var(--min-clock-hand);
 }
-.ControlsBtns button:nth-last-child(1){
+.ControlsBtns button:nth-last-child(2){
   background-color: var(--hour-clock-hand);
 }
