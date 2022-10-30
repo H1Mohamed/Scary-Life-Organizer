@@ -258,4 +258,3 @@ renderCalendar();
 CountDownTimer(EventsData.E1.EventTime,"EventCountDownTimer",EventsData.E1.EventsCelebration)
 
 EventsElements()
-
