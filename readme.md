@@ -1,12 +1,12 @@
 # Interview:
-## What is LifeOrginier
+## What is Scary-Life-Orginier:
 It's a chrome extension made fully to help you and 
 __anyone__ to __Organize__ their lives using very impressive __features__.
 ## Features:
 1. A Callender
 2. A Clock.
-3. An upcoming Event with a Desctop Notification system.
-4. A CountDown Timer And stopwatch
+3. An upcoming Event with a countdown timer till the event time.
+4. A Stopwatch.
 5. A theme that is updated according to the current event.
   * More Features are coming soon with later updates.
 
@@ -43,4 +43,4 @@ __anyone__ to __Organize__ their lives using very impressive __features__.
   * Google Fonts for icons and the font
   * W3School for code snippets and solutions.
   * W3S Discord members for the help, motivation, & the W3S event that started this project.
-  * Everyone who reviewed used or supported this project while its development.
+  * Everyone who reviewed used or supported this project while its early development.
