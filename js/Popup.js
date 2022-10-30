@@ -146,7 +146,6 @@ document.querySelector(".next").addEventListener("click", () => {
   renderCalendar();
 });
 
-
 function EventsElements(){
   if(EventsData.E1){
     EventsBody.appendChild(EventElement);
