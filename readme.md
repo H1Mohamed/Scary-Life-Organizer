@@ -1,4 +1,5 @@
 # Interview:
+<<<<<<< HEAD
 ## What is LifeOrginier
 It's an open-source __Google Chrome/Microsoft Edge__ Extention made entirely to help you and anyone __organize__ their scary life by utilizing awesome cool __features__.
 ## Features:
@@ -7,6 +8,16 @@ It's an open-source __Google Chrome/Microsoft Edge__ Extention made entirely to 
 3. An event system that shows the current and upcoming events and important days with a countdown timer to the time of the event.
 4. A StopWatch
 5. A theme that is updated according to the current biggest event.
+=======
+## What is Scary-Life-Orginier(LifeOrginizer):
+It's a chrome extension made fully to help you and 
+__anyone__ to __Organize__ their lives using very impressive __features__.
+## Features:
+1. A Callender
+2. A Clock.
+3. An upcoming Event with a countdown timer till the event time.
+4. A Stopwatch.
+5. A theme that is updated according to the current event.
   * More Features are coming soon with later updates.
 
 ## Requirements:
@@ -42,5 +53,9 @@ It's an open-source __Google Chrome/Microsoft Edge__ Extention made entirely to 
   * Google Fonts for icons and the font
   * W3School for code snippets and solutions.
   * W3S Discord members for the help, motivation, & the W3S event that started this project.
+<<<<<<< HEAD
   * Everyone who reviewed used or supported this project while its development.
   * Theme beta for the theme tools
+=======
+  * Everyone who reviewed used or supported this project while its early development.
+>>>>>>> 4c708e86c9d4d43aabc145bbe6cc35179a05c716
