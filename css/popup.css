@@ -302,6 +302,8 @@ body::-webkit-scrollbar-thumb{background-color: var(--click-hover-colors);border
   font-size: 1.2rem;
 }
 .EventDiscription{font-size: 1.2rem;}
+.EventCountDownTimer{font-size: 1.2rem;}
+#EventCountDownTimer{margin-left: 1.5rem;}
 /* The Timer Section */
 
 .timerDisplay{

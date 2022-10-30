@@ -12,7 +12,7 @@ let links = document.querySelectorAll("[data-link]"),
 panel = document.querySelectorAll(".panel")
 
 
-const EventsData=JSON.parse(JSON.stringify(EventsDataRaw))
+const EventsData=JSON.parse(JSON.stringify(EventsDataRaw));
 var EventsBody = document.getElementById("EventsDiv")
 var EventElement = document.createElement('div')
 EventElement.classList.add("Event")
@@ -191,7 +191,7 @@ function displayTimer(){
 
   timerRef.innerHTML = ` ${h} : ${m} : ${s} : ${ms}`;
 }
-function CountDownTimer(dt, id){
+function CountDownTimer(dt, id,Wd){
   var end = new Date(dt);
   var _second = 1000;
   var _minute = _second * 60;
@@ -203,7 +203,7 @@ function CountDownTimer(dt, id){
     var distance = end - now;
     if (distance < 0) {
       clearInterval(timer);
-      document.getElementById(id).innerHTML += 'EXPIRED!';
+      document.getElementById(id).innerHTML += Wd;
       return;
     }
     var days = Math.floor(distance / _day);
@@ -255,6 +255,7 @@ for(let i = 0; i < links.length; i++) {
 }
 renderCalendar(); 
 
-CountDownTimer(EventsData.E1.EventTime,"EventCountDownTimer")
+CountDownTimer(EventsData.E1.EventTime,"EventCountDownTimer",EventsData.E1.EventsCelebration)
 
 EventsElements()
+

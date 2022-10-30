@@ -1,18 +1,17 @@
 # Interview:
 ## What is LifeOrginier
-It's a chrome extension made fully to help you and 
-__anyone__ to __Organize__ their lives using very impressive __features__.
+It's an open-source __Google Chrome/Microsoft Edge__ Extention made entirely to help you and anyone __organize__ their scary life by utilizing awesome cool __features__.
 ## Features:
 1. A Callender
 2. A Clock.
-3. An upcoming Event with a Desctop Notification system.
-4. A CountDown Timer And stopwatch
-5. A theme that is updated according to the current event.
+3. An event system that shows the current and upcoming events and important days with a countdown timer to the time of the event.
+4. A StopWatch
+5. A theme that is updated according to the current biggest event.
   * More Features are coming soon with later updates.
 
 ## Requirements:
-  1. Chrome /Chromium/Brave/Edge for just the Extention.
-  2. Chrome / Chromium if you are going to use the theme with the extension.
+  1. Google Chrome /Chromium/Brave/ MS Edge for just the Extention.
+  2. Google Chrome / Chromium if you are going to use the theme with the extension(for the best appearance).
   3. Constant Internet Connection for icons and fonts.
 
 
@@ -36,7 +35,7 @@ __anyone__ to __Organize__ their lives using very impressive __features__.
   6. click \*load unpacked\*.
   7. choose the UnZipped folder.
   8. Now click \*load unpacked\*
-  9. choose the "themes" folder in the Unzipped folder
+  9. choose the "LifeOrginizer Theme" folder in the Unzipped folder
 ## Issues:
   If you want to report any __Issues__ or __Bugs__ in the code. Please report them in Github's issues tab.
 ## Special thanks:
@@ -44,3 +43,4 @@ __anyone__ to __Organize__ their lives using very impressive __features__.
   * W3School for code snippets and solutions.
   * W3S Discord members for the help, motivation, & the W3S event that started this project.
   * Everyone who reviewed used or supported this project while its development.
+  * Theme beta for the theme tools

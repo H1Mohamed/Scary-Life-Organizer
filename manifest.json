@@ -11,6 +11,5 @@
     "action":{
         "default_popup":"popup/popup.html",
         "default_title": "LifeOrginizer"
-    },
-    "permissions": ["tabs"]
+    }
 }
