@@ -1,5 +1,5 @@
 # Interview:
-## What is Scary-Life-Orginier:
+## What is Scary-Life-Orginier(LifeOrginizer):
 It's a chrome extension made fully to help you and 
 __anyone__ to __Organize__ their lives using very impressive __features__.
 ## Features:
