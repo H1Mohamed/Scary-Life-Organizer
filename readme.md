@@ -48,3 +48,8 @@ It's an open-source __Google Chrome/Microsoft Edge__ Extension made entirely to 
   * W3S Discord members for the help, motivation, & the W3S event that started this project.
   * Everyone who reviewed used or supported this project while its development.
   * Theme beta for the theme tools
+ 
+## Usfull Links:
+* [Chrome Extensions Docs](https://developer.chrome.com/docs/extensions/)
+* [My Website](https://h-mohamed.netlify.app/)
+* [W3 Website](https://www.w3schools.com/)
